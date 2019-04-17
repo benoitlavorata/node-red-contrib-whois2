@@ -13,20 +13,18 @@ module.exports = function (RED) {
     function MyNode(config) {
         const node = this;
         RED.nodes.createNode(node, config);
+        const logic = require('./logic.js');
 
-        const whois = require('whois-json');
-
-        const requiredArgs = ['method', 'args'];
         node.on('input', function (msg) {
-            console.log(node);
             node.status({
                 fill: "blue",
                 shape: "dot",
-                text: `Whois ${msg.payload}...`
+                text: `Running...`
             });
 
             msg['_original'] = msg.payload;
-            var results = whois(msg.payload)
+            logic
+                .onMessage(msg.payload)
                 .then(data => {
                     node.status({
                         fill: "green",
