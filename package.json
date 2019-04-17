@@ -1,0 +1,21 @@
+{
+  "name": "node-red-contrib-hunterio",
+  "version": "1.1.0",
+  "description": "Provide whois block to get domain name information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "whois": "whois.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/benoit.lavorata/node-red-contrib-whois.git"
+  },
+  "author": "Benoit Lavorata",
+  "license": "ISC",
+  "dependencies": {}
+}
