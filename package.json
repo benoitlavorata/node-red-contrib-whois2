@@ -8,7 +8,7 @@
   },
   "node-red": {
     "nodes": {
-      "whois": "whois.js"
+      "whois": "node.js"
     }
   },
   "repository": {
