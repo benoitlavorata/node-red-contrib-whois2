@@ -24,7 +24,7 @@ module.exports = function (RED) {
 
             msg['_original'] = msg.payload;
             logic
-                .onMessage(msg.payload)
+                .onMessage(msg)
                 .then(data => {
                     node.status({
                         fill: "green",
